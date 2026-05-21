@@ -35,12 +35,15 @@ st.subheader("① 4点クリックでROI指定（ドラッグで修正可）")
 canvas = st_canvas(
     background_image=img_pil,
     drawing_mode="polygon",         # ★ここがポイント
-    stroke_width=2,                 # 細線
+    display_toolbar=True
+    stroke_width=0.5,                 # 細線
     stroke_color="#00FF00",
     fill_color="rgba(0,255,0,0.2)", # 半透明
     height=disp_h,
     width=disp_w,
-    key="canvas"
+    key="canvas",
+    initial_drawing=None
+    realtime_update=False
 )
 
 # =========================
